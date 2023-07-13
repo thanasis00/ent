@@ -132,6 +132,18 @@ points:
       key:
         footprints:
 cases:
+  standoff_sample:
+    - name: standoff_sample
+      extrude: 8
+  standoff_sample_2:
+    - name: standoff_sample_2
+      extrude: 7
+  standoff_sample_4:
+    - name: standoff_sample_3
+      extrude: 6
+  standoff_sample_3:
+    - name: standoff_sample_4
+      extrude: 8
   _holes:
     - name: mounting
       extrude: 4
@@ -146,6 +158,19 @@ cases:
     - what: outline
       name: switch_plate
       extrude: choc_plate_thickness
+  standoff_gozilla:
+    - what: case
+      name: standoff_sample
+      operation: add
+    - what: case
+      name: standoff_sample_2
+      operation: add
+    - what: case
+      name: standoff_sample_3
+      operation: add
+    - what: case
+      name: standoff_sample_4
+      operation: add
   case:
     - what: case
       name: _standoffs
@@ -173,15 +198,35 @@ outlines:
       where:
         ref: matrix_inner_home
         shift: [30, 7.5]
+  standoff_sample:
+    - what: circle
+      radius: standoffSize
+      where:
+        shift: [140, 19]
+  standoff_sample_2:
+    - what: circle
+      radius: standoffSize
+      where:
+        shift: [120, 19]
+  standoff_sample_3:
+    - what: circle
+      radius: standoffSize
+      where:
+        shift: [100, 19]
+  standoff_sample_4:
+    - what: circle
+      radius: standoffSize
+      where:
+        shift: [80, 19]
   standoff:
     - what: circle
       radius: standoffSize
       where:
-        shift: [117, 19]
+        shift: [121, 19]
     - what: circle
       radius: standoffSize
       where:
-        shift: [117, -7]
+        shift: [122, -7]
     - what: circle
       radius: standoffSize
       where:
@@ -205,11 +250,11 @@ outlines:
     - what: circle
       radius: screwSize
       where:
-        shift: [117, 19]
+        shift: [121, 19]
     - what: circle
       radius: screwSize
       where:
-        shift: [117, -7]
+        shift: [122, -7]
     - what: circle
       radius: screwSize
       where:
